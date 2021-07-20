@@ -1,0 +1,48 @@
+{
+  "name": "@c6o/provisioner",
+  "version": "0.2.7",
+  "description": "Provisioner library for traxitt",
+  "author": "Narayan Sainaney <narayan@sainaney.com>",
+  "homepage": "https://github.com/nsainaney/traxitt#readme",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "k8s"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsainaney/traxitt.git"
+  },
+  "scripts": {
+    "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../obfuscate.json",
+    "postobfuscate": "rm -rf lib && mv ./dist ./lib"
+  },
+  "bugs": {
+    "url": "https://github.com/nsainaney/traxitt/issues"
+  },
+  "dependencies": {
+    "@c6o/common": "^0.2.7",
+    "@c6o/kubeclient": "^0.0.13",
+    "@c6o/kubeclient-contracts": "^0.0.13",
+    "@provisioner/c6o-system": "^0.0.30",
+    "@provisioner/common": "^0.0.30",
+    "@provisioner/contracts": "^0.0.30",
+    "assign-deep": "^1.0.1",
+    "fast-json-patch": "^3.0.0-1",
+    "inquirer": "^8.0.0",
+    "js-yaml": "^4.0.0",
+    "kube-watch": "^0.5.4",
+    "live-plugin-manager": "^0.15.1",
+    "mixwith": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^7.3.1"
+  }
+}

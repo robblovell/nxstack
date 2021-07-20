@@ -1,0 +1,11 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: rabbitmq
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: rabbitmq
+    system.codezero.io/description: RabbitMQ messaging system
+spec:
+  provisioner: {}

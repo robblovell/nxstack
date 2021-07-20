@@ -1,0 +1,20 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: mongo
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: test-service
+    system.codezero.io/description: This is a description
+spec:
+  provisioner:
+      tag: 4
+      rootUser: root
+      config:
+          - testDb:
+              user: testUser
+              password: password
+              roles:
+                  - readWrite
+              secretKey: MONGO_TESTDB_URI

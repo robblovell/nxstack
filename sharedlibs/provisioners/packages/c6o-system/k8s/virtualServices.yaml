@@ -1,0 +1,82 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: system
+  namespace: c6o-system
+spec:
+  gateways:
+  - c6o-system/system-gateway
+  hosts:
+  - '*'
+  http:
+  - match:
+    - uri:
+        prefix: /store/
+      headers:
+        :authority:
+          regex: ^{{host}}$
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: system-store
+  - match:
+    - uri:
+        prefix: /navstation/
+      headers:
+        :authority:
+          regex: ^{{host}}$
+    rewrite:
+      uri: /
+    route:
+    - destination:
+        host: system-navstation
+  - match:
+      - uri:
+          prefix: /harbourmaster/
+        headers:
+          :authority:
+            regex: ^{{host}}$
+    rewrite:
+      uri: /
+    route:
+      - destination:
+          host: system-harbourmaster
+  - match:
+      - uri:
+          prefix: /lifeboat/
+        headers:
+          :authority:
+            regex: ^{{host}}$
+    rewrite:
+      uri: /
+    route:
+      - destination:
+          host: system-lifeboat
+  - match:
+    - uri:
+        prefix: /api/
+      headers:
+        :authority:
+          regex: ^{{host}}$
+    route:
+    - destination:
+        host: system-server
+  - match:
+    - uri:
+        prefix: /
+      headers:
+        :authority:
+          regex: ^{{host}}$
+    route:
+    - destination:
+        host: system-marina
+  - match: # apps ingress
+    - uri:
+        prefix: /
+      headers:
+        :authority:
+          regex: ^.+--.+\.{{host}}$
+    route:
+    - destination:
+        host: system-server

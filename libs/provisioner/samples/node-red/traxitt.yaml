@@ -1,0 +1,20 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: node-red
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: Node RED
+    system.codezero.io/description: Node-RED application
+spec:
+  marina:
+    launch:
+      type: inline
+      port: 1880
+      tag: node-red
+  provisioner:
+      projects: false
+      storage: 2Gi
+      # package: '@provisioner/simple'
+      # tag-prefix: 'simple'

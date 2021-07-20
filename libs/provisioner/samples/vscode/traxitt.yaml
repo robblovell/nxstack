@@ -1,0 +1,14 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: vscode
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: vscode
+    system.codezero.io/description: This is the installer spec for the vscode remote development environment
+spec:
+    provisioner:
+      launch: true
+      storage: 4Gi
+      #publicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgE7PEEwrQN2RxFs2ATRufwkBhq/SeXJ63gtmQ78J3WA/CxGeYTFMtxIMS7+ikyg/N9uSgyV26gcjKhnSpV3Jd/AfIvDGPVRxkPyrcEFkB6/avBrQEQazfMFmfSlJAdZyOGF1YW5e3Mq5QVUOv4LvouGhBKrY0/GorfeHgYwmtfoEv3Z0lxs4nOzTBTGHKCEfu/Y/b8/6LBBjkQtSvT/Z9oDQMfTAicX9znreONVRIppVMvTBjHVIELJn3LjYC9gMaYaCSSaHdRPK7o+HlM9CmPI7OSXpRG8bPuy0OkrT4g00CGbLeW05Gr7RXOos3RVRPF8obPR2Kh5EYxp0HbAMj mike@myhost.local\n"

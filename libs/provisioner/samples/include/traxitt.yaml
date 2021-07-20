@@ -1,0 +1,7 @@
+name: test-service
+version: 0.0.1
+description: This is a description
+secretKeyRef: foo
+services:
+    - mongo: mongo.yaml
+    # - redis:

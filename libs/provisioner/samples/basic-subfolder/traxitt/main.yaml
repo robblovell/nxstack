@@ -1,0 +1,16 @@
+name: test-service
+version: 0.0.1
+description: This is a description
+secretKeyRef: foo
+services:
+    - mongo:
+        tag: 4
+        rootUser: root
+        config:
+             - testDb:
+                user: testUser
+                password: password
+                roles:
+                    - readWrite
+                secretKey: MONGO_TESTDB_URI
+    # - redis:

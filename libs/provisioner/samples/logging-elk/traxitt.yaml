@@ -1,0 +1,16 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: logging-elk
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: Logging (ELK)
+    system.codezero.io/description: Logging app with Elasticsearch, Logstash, and Kibana (ELK stack) with Fluentd
+spec:
+  marina:
+    launch:
+      type: inline
+      port: 5601
+      tag: logging-elk
+  provisioner:

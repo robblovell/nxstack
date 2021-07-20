@@ -1,0 +1,8 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: istio
+  namespace: istio-system
+spec:
+  provisioner:
+    prometheus-link: demo

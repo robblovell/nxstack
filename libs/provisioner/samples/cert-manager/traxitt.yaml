@@ -1,0 +1,14 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+    name: cert-manager
+    namespace: cert-manager
+    labels:
+        app.kubernetes.io/version: 0.0.1
+    annotations:
+        system.codezero.io/display: cert-manager
+        system.codezero.io/description: This is the installer spec for cert-manager
+spec:
+    provisioner:
+    navstation: true
+

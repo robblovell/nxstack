@@ -1,0 +1,7 @@
+env: development
+services:
+    - mongo:
+        tag: 5
+        config:
+          - testDb2:
+              secretKey: MONGO_TESTSDB2_URI

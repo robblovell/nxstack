@@ -1,0 +1,8 @@
+tag: 4
+rootUser: root
+config:
+  - testDb:
+      user: testUser
+      roles:
+          - readWrite
+      secretKey: MONGO_TESTDB_URI

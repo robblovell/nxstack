@@ -1,0 +1,21 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./lib"
+  },
+  "references": [
+    { "path": "../common" },
+    { "path": "../grafana" },
+    { "path": "../istio" }
+  ],
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "**/*.unit.ts",
+    "lib",
+    "node_modules",
+    "test",
+  ]
+}

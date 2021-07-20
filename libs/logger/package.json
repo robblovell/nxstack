@@ -1,0 +1,40 @@
+{
+  "name": "@c6o/logger",
+  "version": "0.2.7",
+  "description": "CodeZero logger module",
+  "keywords": [
+    "codezero",
+    "logger"
+  ],
+  "author": "Robb Lovell <robblovell@gmail.com>",
+  "homepage": "https://github.com/robblovell",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsainaney/traxitt.git"
+  },
+  "scripts": {
+    "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../obfuscate.json",
+    "postobfuscate": "rm -rf lib && mv ./dist ./lib"
+  },
+  "bugs": {
+    "url": "https://github.com/nsainaney/codezero/issues"
+  },
+  "browser": {
+    "callsite": false,
+    "path": false
+  },
+  "dependencies": {
+    "callsite": "^1.0.0",
+    "debug": "^4.1.1",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "./lib",
+        "rootDir": "./src"
+    },
+    "references": [
+        { "path":  "../logger" },
+        { "path":  "../../sharedlibs/kubeclient/packages/client" },
+        { "path":  "../../sharedlibs/kubeclient/packages/contracts" },
+        { "path":  "../../sharedlibs/kubeclient/packages/resources" },
+        { "path": "../../sharedlibs/provisioners/contracts"},
+        { "path": "../../sharedlibs/provisioners/common"}
+    ],
+    "include": [
+        "src"
+    ]
+}

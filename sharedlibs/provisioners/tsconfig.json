@@ -1,0 +1,11 @@
+{
+    "files": [],
+    "references": [
+        {"path": "./packages/c6o-system"},
+        {"path": "./packages/common"},
+        {"path": "./packages/contracts"},
+        {"path": "./packages/grafana"},
+        {"path": "./packages/istio"},
+        {"path": "./packages/prometheus"},
+    ]
+}

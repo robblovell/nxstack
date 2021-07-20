@@ -1,0 +1,26 @@
+{
+  "packages": [
+    "packages/**"
+  ],
+  "version": "0.0.30",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": "develop",
+      "changelogPreset": "metahub",
+      "message": "chore(release): %s",
+      "conventionalCommits": true,
+      "createRelease": "github"
+    }
+  },
+  "ignoreChanges": [
+    "**/changelog.md",
+    "**/CHANGELOG.md",
+    "**/package-lock.json",
+    "**/yarn.lock",
+    "**/test/**",
+    "lerna.json",
+    "readme.md"
+  ]
+}

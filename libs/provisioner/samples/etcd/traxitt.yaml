@@ -1,0 +1,11 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: etcd
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: etcd
+    system.codezero.io/description: etcd storage system
+spec:
+  provisioner:

@@ -1,0 +1,1 @@
+{"version":3,"file":"base.js","sourceRoot":"","sources":["../../../../../../src/performers/app/base.ts"],"names":[],"mappings":";;;AACA,sDAAqD;AACrD,kCAAoD;AAEpD,MAAa,YAA0D,SAAQ,gBAAY;IAGvF,IAAI,SAAS;QACT,IAAI,IAAI,CAAC,UAAU;YAAE,OAAO,IAAI,CAAC,UAAU,CAAA;QAC3C,OAAO,IAAI,CAAC,UAAU,GAAG,wBAAY,EAAE,CAAA;IAC3C,CAAC;CACJ;AAPD,oCAOC"}

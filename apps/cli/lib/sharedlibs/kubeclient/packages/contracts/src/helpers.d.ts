@@ -1,0 +1,3 @@
+export declare type PartialDeep<T> = {
+    [P in keyof T]?: PartialDeep<T[P]>;
+};

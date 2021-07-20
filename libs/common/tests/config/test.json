@@ -1,0 +1,11 @@
+{
+    "mongodb": "mongodb://localhost:27017/traxitt-hub-test",
+    "url": "http://localhost:3030",
+    "authentication": {
+        "secret": "THIS IS A SECRET"
+    },
+    "logging": {
+        "level": "error",
+        "console": "true"
+    }
+}

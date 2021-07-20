@@ -1,0 +1,14 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+    name: istio
+    namespace: istio-system
+    labels:
+        app.kubernetes.io/version: 0.0.1
+    annotations:
+        system.codezero.io/display: istio-system
+        system.codezero.io/description: This is the installer spec for istio
+spec:
+    provisioner:
+        ingressEnabled: true
+    navstation: true

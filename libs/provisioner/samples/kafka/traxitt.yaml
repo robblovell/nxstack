@@ -1,0 +1,10 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+    name: kafka
+    labels:
+        app.kubernetes.io/version: 0.0.1
+    annotations:
+        system.codezero.io/description: Kafka provisioner
+spec:
+    provisioner:

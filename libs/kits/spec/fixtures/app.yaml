@@ -1,0 +1,18 @@
+_id: system
+name: System
+appId: c6o-system
+editions:
+  - name: latest
+    status: public
+    spec:
+      navstation: true
+      provisioner:
+        tag: latest
+        namespace: c6o-system
+---
+_id: store
+name: Store
+appId: store
+editions:
+  - name: latest
+    status: public

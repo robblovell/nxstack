@@ -1,0 +1,76 @@
+{
+  "name": "@c6o/common",
+  "version": "0.2.7",
+  "description": "Common Traxitt module",
+  "keywords": [
+    "traxitt",
+    "common"
+  ],
+  "author": "Narayan Sainaney <narayan@sainaney.com>",
+  "homepage": "https://github.com/nsainaney/traxitt#readme",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsainaney/traxitt.git"
+  },
+  "scripts": {
+    "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../obfuscate.json",
+    "postobfuscate": "rm -rf lib && mv ./dist ./lib"
+  },
+  "bugs": {
+    "url": "https://github.com/nsainaney/traxitt/issues"
+  },
+  "browser": {
+    "fs": false,
+    "aws4": false,
+    "xml2js": false,
+    "node-jose": false
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.11",
+    "@feathersjs/authentication-client": "^4.5.11",
+    "@feathersjs/authentication-oauth": "^4.5.11",
+    "@feathersjs/client": "^4.5.11",
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/socketio": "^4.5.11",
+    "@feathersjs/socketio-client": "^4.5.11",
+    "@splitsoftware/splitio": "^10.15.0",
+    "ajv": "^6.10.2",
+    "ajv-errors": "^1.0.1",
+    "aws4": "^1.11.0",
+    "axios": "^0.19.2",
+    "callsite": "^1.0.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "dayjs": "^1.10.4",
+    "debug": "^4.1.1",
+    "fast-redact": "^2.0.0",
+    "fluent-logger": "^3.4.1",
+    "helmet": "^3.20.1",
+    "inversify": "^5.0.1",
+    "inversify-inject-decorators": "^3.1.0",
+    "localstorage-memory": "^1.0.3",
+    "mobx": "^5.10.1",
+    "nedb": "^1.8.0",
+    "node-jose": "^1.1.4",
+    "prom-client": "^12.0.0",
+    "reflect-metadata": "^0.1.13",
+    "serve-favicon": "^2.5.0",
+    "socket.io-client": "^2.3.0",
+    "ulid": "^2.3.0",
+    "winston": "^3.2.1",
+    "winston-elasticsearch": "^0.9.0",
+    "xml2js": "^0.4.23"
+  }
+}

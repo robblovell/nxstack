@@ -1,0 +1,14 @@
+apiVersion: system.codezero.io/v1
+kind: App
+metadata:
+  name: grafana
+  labels:
+    app.kubernetes.io/version: 0.0.1
+  annotations:
+    system.codezero.io/display: grafana
+    system.codezero.io/description: Grafana application
+spec:
+  provisioner:
+    adminUsername: admin
+    adminPassword: admin
+    storage: 1Gi

@@ -1,0 +1,15 @@
+# https://github.com/digitalocean/csi-digitalocean/blob/master/examples/kubernetes/pod-single-existing-volume/README.md
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: grafana-pvc
+  namespace: '{{namespace}}'
+  labels:
+    system.codezero.io/app: grafana
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{storage}}
+  storageClassName: {{storageClass}}
