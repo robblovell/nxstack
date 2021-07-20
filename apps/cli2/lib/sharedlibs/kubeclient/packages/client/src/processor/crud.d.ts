@@ -1,0 +1,47 @@
+/// <reference types="node" />
+import { Resource, PatchOps, PartialDeep } from '@c6o/kubeclient-contracts';
+import { baseProcessorMixinType } from './';
+export declare const crudMixin: (base: baseProcessorMixinType) => {
+    new (...a: any[]): {
+        owners: Array<Resource>;
+        mergeDocument: Partial<Resource>;
+        mergeWith(document: Partial<Resource>): any;
+        clearMergeWith(): any;
+        addOwner(document: Resource): any;
+        clearOwners(): any;
+        list(document: Resource): any;
+        read(document: Resource): any;
+        create(document: Resource): any;
+        patch(document: Resource, patch: PartialDeep<Resource> | PatchOps): any;
+        delete(document: Resource): any;
+        upsert(document: Resource): any;
+        cluster: import("..").Cluster;
+        stageName?: any;
+        sleep: (ms: any) => Promise<unknown>;
+        commands: import("@c6o/kubeclient-contracts").commandFn[];
+        additions: import("@c6o/kubeclient-contracts").commandFn[];
+        waitListPromises: Promise<any>[];
+        ended: boolean;
+        currentCommand: import("@c6o/kubeclient-contracts").commandFn;
+        lastCommand: import("@c6o/kubeclient-contracts").commandFn;
+        lastResult: import("@c6o/kubeclient-contracts").Result;
+        waitList: (promise: Promise<any>) => number;
+        ensureVersion(): Promise<void>;
+        runWorker(): Promise<void>;
+        do(cmd: import("@c6o/kubeclient-contracts").commandFn): any;
+        end(): Promise<import("@c6o/kubeclient-contracts").Result>;
+        attempt(times: number, sleepTime: number, fn: import("@c6o/kubeclient-contracts").attemptCallback): any;
+        copy(resource: Resource, src: string, dst: string): any;
+        exec(resource: Resource, command: string | string[], stdout?: import("stream").Writable, stderr?: import("stream").Writable, stdin?: import("stream").Readable): any;
+        eachFile(fn: any, file: string, params?: any): any;
+        upsertFile(file: string, params?: any): any;
+        createFile(file: string, params?: any): any;
+        deleteFile(file: string, params?: any): any;
+        if(condition: boolean, trueCallback: import("@c6o/kubeclient-contracts").ifCallback, falseCallback?: import("@c6o/kubeclient-contracts").ifCallback): any;
+        beginForward(containerPort: number, resource: Resource): any;
+        endForward(): any;
+        beginWatch(resource: Resource): any;
+        whenWatch(conditionFn: any, actionFn: any): any;
+        endWatch(): any;
+    };
+};
