@@ -1,0 +1,40 @@
+{
+  "root": "apps/cli",
+  "sourceRoot": "apps/cli/src",
+  "projectType": "application",
+
+  "targets": {
+    "build": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "tsc -b ./tsconfig.app.json ",
+        "cwd": "apps/cli",
+        "parallel": false
+      }
+    },
+    "echo": {
+      "executor": "./tools/executors/echo:echo",
+      "options": {
+        "textToEcho": "Hello World"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/cli/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/apps/cli"
+      ],
+      "options": {
+        "jestConfig": "apps/cli/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

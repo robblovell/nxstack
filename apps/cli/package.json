@@ -1,0 +1,83 @@
+{
+  "name": "@c6o/cli",
+  "version": "0.2.6",
+  "description": "CLI for codezero",
+  "private": true,
+  "keywords": [
+    "traxitt",
+    "codezero",
+    "czctl",
+    "cli"
+  ],
+  "author": "Narayan Sainaney <narayan@codezero.io>",
+  "homepage": "https://codezero.io",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "k8s"
+  ],
+  "bin": {
+    "czctl": "lib/apps/cli/src/index.js",
+    "c6octl": "lib/apps/cli/src/index.js"
+  },
+  "scripts": {
+    "bundle": "czbundle --delete",
+    "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../../obfuscate.json",
+    "postobfuscate": "rm -rf lib && mv ./dist ./lib",
+    "prepack": "cp package.json package.json.backup && yarn bundle --modify-package",
+    "postpack": "rm package.json && mv package.json.backup package.json"
+  },
+  "bugs": {
+    "url": "https://github.com/c6o/docs/issues"
+  },
+  "oclif": {
+    "commands": "./lib/apps/cli/src/parser/commands",
+    "bin": "czctl",
+    "helpClass": "./lib/apps/cli/src/parser/help",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-warn-if-update-available",
+      "@tiagonapoli/oclif-plugin-spaced-commands"
+    ],
+    "topics": {
+      "app": {
+        "description": "Install a CodeZero App into a cluster or publish a CodeZero installable application into CodeZero's Marketplace."
+      },
+      "auth": {
+        "description": "Login to or logout of your CodeZero Hub account."
+      },
+      "cronjob": {
+        "description": "Commands that work with Kubernetes cron jobs."
+      },
+      "deployment": {
+        "description": "Commands that work with Kubernetes deployments, like teleport."
+      },
+      "job": {
+        "description": "Commands related to Kubernetes jobs."
+      },
+      "namespace": {
+        "description": "Commands that work with Kubernetes namespaces."
+      },
+      "pod": {
+        "description": "Commands that work directly with Kubernetes pods."
+      },
+      "service": {
+        "description": "Commands that work with Kubernetes services, like intercept."
+      },
+      "session": {
+        "description": "Managing of czctl command sessions. Czctl starts processes in the background as sessions. These commands help you to list and close open sessions."
+      },
+      "statefulset": {
+        "description": "Commands that work with Kubernetes stateful sets."
+      }
+    }
+  },
+  "engines": {
+    "node": ">=13"
+  }
+}

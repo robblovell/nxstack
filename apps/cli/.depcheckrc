@@ -1,0 +1,10 @@
+ignores: [
+    "@oclif/plugin-not-found",
+    "@oclif/plugin-update",
+    "@oclif/plugin-warn-if-update-available",
+    "@sentry/tracing",
+    "@tiagonapoli/oclif-plugin-spaced-commands",
+    "ngrok",
+
+    "@provisioner/c6o-system"
+]

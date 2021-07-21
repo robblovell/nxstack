@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./lib",
+    "target": "es2015",
+    "lib": ["es2018", "dom"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../libs/common/src/**/*.ts",
+    "../../libs/kits/src/**/*.ts",
+    "../../libs/logger/src/**/*.ts",
+    "../../libs/provisioner/src/**/*.ts"
+  ]
+}
