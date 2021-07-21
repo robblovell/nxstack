@@ -44,34 +44,7 @@
     "logger": {
       "tags": []
     },
-    "provisioners/c6o-system": {
-      "tags": []
-    },
-    "provisioners/common": {
-      "tags": []
-    },
-    "provisioners/contracts": {
-      "tags": []
-    },
-    "provisioners/grafana": {
-      "tags": []
-    },
-    "provisioners/istio": {
-      "tags": []
-    },
-    "provisioners/prometheus": {
-      "tags": []
-    },
-    "kubeclient/client": {
-      "tags": []
-    },
-    "kubeclient/common": {
-      "tags": []
-    },
-    "kubeclient/contracts": {
-      "tags": []
-    },
-    "kubeclient/resources": {
+    "provisioner": {
       "tags": []
     }
   }

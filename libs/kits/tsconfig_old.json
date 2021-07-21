@@ -6,11 +6,11 @@
     },
     "references": [
         { "path":  "../logger" },
-        { "path":  "../../sharedlibs/kubeclient/packages/client" },
-        { "path":  "../../sharedlibs/kubeclient/packages/contracts" },
-        { "path":  "../../sharedlibs/kubeclient/packages/resources" },
-        { "path": "../../sharedlibs/provisioners/contracts"},
-        { "path": "../../sharedlibs/provisioners/common"}
+        { "path":  "../../libs/kubeclient/packages/client" },
+        { "path":  "../../libs/kubeclient/packages/contracts" },
+        { "path":  "../../libs/kubeclient/packages/resources" },
+        { "path": "../../libs/provisioners/contracts"},
+        { "path": "../../libs/provisioners/common"}
     ],
     "include": [
         "src"

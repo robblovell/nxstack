@@ -1,4 +1,5 @@
 #!/bin/sh
 cd apps/cli
 npm link
-chmod +x bin/run
+chmod +x lib/apps/cli/src/index.js
+cd ../../

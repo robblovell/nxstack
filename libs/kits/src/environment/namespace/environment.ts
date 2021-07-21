@@ -1,6 +1,6 @@
 
 import { BaseNamespaceHelper } from './base'
-import { Namespace } from '@c6o/kubeclient-resources/lib/core/v1'
+import { Namespace } from '@c6o/kubeclient-resources/core/v1'
 
 export class EnvironmentNamespaceHelper extends BaseNamespaceHelper {
     get type() { return 'environment' }

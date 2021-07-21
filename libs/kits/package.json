@@ -1,34 +1,33 @@
 {
-    "name": "@c6o/kits",
-    "version": "0.2.7",
-    "description": "CodeZero Kubernetes Resource kits",
-    "keywords": [
-        "kits"
-    ],
-    "author": "Narayan Sainaney <narayan@codezero.io>",
-    "homepage": "https://github.com/c6o/node-monorepo#readme",
-    "license": "UNLICENSED",
-    "main": "lib/index.js",
-    "files": [
-        "lib",
-        "k8s"
-    ],
-    "publishConfig": {
-        "access": "restricted"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/c6o/node-monorepo.git"
-    },
-    "scripts": {
-        "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../obfuscate.json",
-        "postobfuscate": "rm -rf lib && mv ./dist ./lib"
-    },
-    "bugs": {
-        "url": "https://github.com/c6o/node-monorepo/issues"
-    },
-    "dependencies": {
-        "js-yaml": "^4.0.0",
-        "object-merge-advanced": "^11.0.0"
-    }
+  "name": "@c6o/kits",
+  "version": "0.2.7",
+  "description": "CodeZero Kubernetes Resource kits",
+  "keywords": [
+    "kits"
+  ],
+  "author": "Narayan Sainaney <narayan@codezero.io>",
+  "homepage": "https://github.com/c6o/node-monorepo#readme",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib",
+    "k8s"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c6o/node-monorepo.git"
+  },
+  "scripts": {
+    "obfuscate": "javascript-obfuscator ./lib --output ./dist --config ../../obfuscate.json",
+    "postobfuscate": "rm -rf lib && mv ./dist ./lib"
+  },
+  "bugs": {
+    "url": "https://github.com/c6o/node-monorepo/issues"
+  }
 }

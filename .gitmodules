@@ -1,3 +1,0 @@
-[submodule "sharedlibs/kubeclient"]
-	path = sharedlibs/kubeclient
-	url = git@github.com:c6o/kubeclient.git

@@ -1,6 +1,6 @@
 import { EventEmitter } from 'events'
 import { Resource, ResourceHelper, Status } from '@c6o/kubeclient-contracts'
-import { Cluster } from '@c6o/kubeclient'
+import { Cluster, KubeDocument } from '@c6o/kubeclient'
 import { AppResource, optionFunctionType, signalDocument } from '@provisioner/contracts'
 import * as path from 'path'
 
@@ -44,7 +44,7 @@ export class ProvisionerManager extends EventEmitter {
     constructor(options?: ProvisionerManagerOptions) {
         super()
 
-        this.cluster = options?.cluster || new Cluster()
+        this.cluster = options?.cluster || new Cluster({})
         this.noInput = options?.noInput
         this.status = options?.status
     }
@@ -60,7 +60,9 @@ export class ProvisionerManager extends EventEmitter {
                 stringOrDocument
 
         switch (kind) {
-            case 'App':
+          case 'App':
+              // TODO: //REL:: what happened here? Did something get refactored?
+              //@ts-ignore
                 this.adapter = new AppAdapter(this, ResourceHelper.isResource(stringOrDocument) ? stringOrDocument as AppResource : undefined)
                 break
             default:
@@ -158,17 +160,17 @@ export class ProvisionerManager extends EventEmitter {
         let result
         switch (this.action) {
             case 'create':
-                result = await this.cluster.create(this.adapter.resource)
+                result = await this.cluster.create(this.adapter.resource as KubeDocument)
                 break
             case 'update':
                 signalDocument(this.adapter.resource)
-                result = await this.cluster.patch(this.adapter.resource, this.adapter.resource)
+                result = await this.cluster.patch(this.adapter.resource as KubeDocument, this.adapter.resource as KubeDocument)
                 break
             case 'remove':
                 // update so that system has deprovision options set if any
-                result = await this.cluster.upsert(this.adapter.resource)
+                result = await this.cluster.upsert(this.adapter.resource as KubeDocument)
                 result.throwIfError()
-                result = await this.cluster.delete(this.adapter.resource)
+                result = await this.cluster.delete(this.adapter.resource as KubeDocument)
                 break
         }
         result.throwIfError()

@@ -22,17 +22,7 @@
       "@c6o/common": ["libs/common/src/index.ts"],
       "@c6o/logger": ["libs/logger/src/index.ts"],
       "@c6o/kits": ["libs/kits/src/index.ts"],
-      "@c6o/provisioner": ["libs/provisioner/src/index.ts"],
-      "@provisioner/c6o-system": ["sharedlibs/provisioners/packages/c6o-system/src/index.ts"],
-      "@provisioner/common": ["sharedlibs/provisioners/packages/common/src/index.ts"],
-      "@provisioner/contracts": ["sharedlibs/provisioners/packages/contracts/src/index.ts"],
-      "@provisioner/grafana": ["sharedlibs/provisioners/packages/grafana/src/index.ts"],
-      "@provisioner/istio": ["sharedlibs/provisioners/packages/istio/src/index.ts"],
-      "@provisioner/prometheus": ["sharedlibs/provisioners/packages/prometheus/src/index.ts"],
-      "@c6o/kubeclient-client": ["sharedlibs/kubeclient/packages/client/src/index.ts"],
-      "@c6o/kubeclient-contracts": ["sharedlibs/kubeclient/packages/contracts/src/index.ts"],
-      "@c6o/kubeclient-resources": ["sharedlibs/kubeclient/packages/resources/src/index.ts"],
-      "@c6o/kubeclient/client": ["sharedlibs/kubeclient/packages/client/src/index.ts"]
+      "@c6o/provisioner": ["libs/provisioner/src/index.ts"]
     }
   },
   "exclude": [
